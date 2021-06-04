@@ -1,0 +1,539 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Barre de navigation*/
+nav {
+    display: grid;
+    grid-template-columns: "1fr 1fr 1fr 1fr 1fr 1fr";
+    background-color: grey;
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  li > a:hover{
+    color: #ffc48c;; 
+  }
+  /*Icon Burger*/
+  
+  #iconBurger{
+    font-size: 20px;
+    display:none;
+  }
+  /*Elements dans la barre de naviguation*/
+  .histoire {
+    grid-column: 1/2;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.4em;
+    text-align: right;
+    padding-top: 22%;
+    cursor: pointer;  
+  }
+  .creations {
+    grid-column: 2;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.4em;
+    text-align: right;
+    padding-top: 22%;
+    cursor: pointer;
+  }
+  
+  /*Logo Emma's cake dans la barre de naviguation*/
+  .logo {
+    text-align: center;
+    z-index: 2;
+    grid-column: 3/5;
+    padding: 60px;
+    position: relative;
+  
+  /* needed for the absolute positionning of the image child */
+  }
+  
+  #header-logo {
+    width: 175px;
+    position: absolute;
+    top: 22px;
+    left: calc(50% - 87.5px);
+    transition: all 0.4s ease;
+  }  
+  
+  .contact {
+    grid-column: 5;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.4em;
+    text-align: left;
+    padding-top: 22%;
+    cursor: pointer;
+  }
+  
+  /* Langues*/
+  .langCon {
+    grid-column: 6;
+    color: #9aebdc;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.6em;
+    padding-top: 8px;
+    padding-right: 12px;
+    text-align: right;
+    letter-spacing: 4px;
+    cursor: pointer;
+  }
+  
+  /* Cover Pinata Cake*/
+  .cakeCoverText {
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.733);
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 17%;
+    padding-top: 4%;
+    padding-bottom: 3%;
+    color: black;
+    width: 100%;
+    height: 50px;
+  }
+
+/*Présentation*/
+
+.présentation{
+    margin-top: -5px;
+    background-color: #cbffff;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+.présentationtext{
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 1.2em;
+    padding-left: 20px;
+}
+.présentationimage{
+    grid-column: 2/3;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*creation d'un caroussel*/
+body{
+    margin: 0;
+}
+div#slider{
+    overflow: hidden;
+}
+div#slider figure img{
+    width: 20%;
+    float: left;
+}
+div#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite;
+}
+
+/*Partie "Découvrir"*/
+
+/*Découpage des 4 blocs en grid*/
+
+.découvrir{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    align-items: center;
+    text-align: center;
+    padding: 30px 70px 30px 70px;
+
+    background-color: #4bcfbf;
+    font-family: helvetica;
+}
+.anniversaire{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
+.mariage{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-left: 50px;
+    padding-bottom: 25px;
+}
+.cupcake{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-right: 50px;
+}
+.demande{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-left: 50px;
+}
+.icone{
+    padding-bottom: 15px;
+}
+h2{
+    padding-bottom: 15px; 
+    font-weight: normal;
+}
+.texteDécouvrir{
+    padding-bottom: 15px;
+    color: white;
+    text-align: left;
+    font-size: 1.2em;
+}
+.boutonDécouvrir{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(60, 48, 78);
+    border-radius: 25px;
+    font-size: 1.3em;
+    padding: 4px 6px 4px 6px
+}
+.boutonDécouvrir:hover{
+    background-color: #FF9F7F;
+}
+
+/*Intégration d'une vidéo*/
+
+.vidéo{
+    background-color: #cbffff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+h3{
+    font-family: Helvetica;
+    font-size: 1.4em;
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+
+        /*Container Grid - Bannière Photos*/
+        #banniere{
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 480px;
+            align-items: center;
+            justify-content: center;
+        }
+        .titreBanniere{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .imgBanniere{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+            /*Flouter l'image*/
+        .imgBanniere img{
+            filter: blur(0px);
+            transition: filter 0.3s ease-in;
+            transform: scale(1.0);
+        }
+        #banniere:hover .imgBanniere img{
+            filter: blur(10px);
+        }
+            /* Bannière*/
+        .titreBanniere{
+            font-size: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            /*z-index: 1;*/
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+                /*cacher titre*/
+            opacity: 0;
+            transition: opacity 0.5s;
+            background: rgba (0, 10, 90, 0.4);
+            color: rgb(14, 27, 26);
+            display: none;
+        }
+        #banniere:hover .titreBanniere{
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+                /*FOOTER*/
+        #footer{
+            margin-top: -2px;
+            background-color: grey;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 80px 50px 100px;
+            color: honeydew;
+            font-size: 15px;
+            padding: 15px;
+        }
+            /*Première colonne*/
+        .logoFooter{
+            grid-column: 1/2;
+            grid-row: 1/3;
+            padding-top: 5px;
+            padding-left: 15px;
+            align-self: center;
+        }
+        .adress{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            padding-left: 15px;
+            align-self: center;
+        }
+            /*Deuzième colonne*/
+        #infos{
+            grid-column: 2/3;
+            grid-row: 1/4;
+            padding-left: 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat (6, 1fr);
+            grid-template-areas: "."
+                                 "acc"
+                                 "mLeg"
+                                 "cG"
+                                 "cook"
+                                 "cred";
+        }
+        .acc{
+            grid-area: acc;
+        }
+        .mLeg{
+            grid-area: mLeg;
+        }
+        .cG{
+            grid-area: cG;
+        }
+        .cook{
+            grid-area: cook;
+        }
+        .cred{
+            grid-area: cred;
+        }
+            /*Troisième colonne*/
+        .champMail{
+            width: 250px;
+            height: 40px;
+            align-self: center;
+            grid-column: 3/4;
+            grid-row: 1/2;
+            border-radius: 5px;
+        }
+        .textMail{
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+        #iconFooter{
+            grid-column: 3/4;
+            grid-row: 3/4;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;  
+        }
+
+@media screen and (max-width: 480px){
+  
+/*Logo Emma's cake dans la barre de naviguation*/
+nav
+{
+background-size: 50px;
+}
+
+/*Logo Emma's Cake*/
+  #header-logo {
+  position: absolute;
+    width: 140px;
+    left: calc(50% - 70px);
+    padding: 1px;
+    border-radius: 50%;
+  }
+/*icon menu burger qui apparaît*/
+  #iconBurger{
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 15px;  
+      background-size: 15px;  
+  }
+
+  .histoire
+  {
+      display: none;
+  }
+  .creations
+  {
+      display: none;
+  }
+  .contact
+  {
+      display: none;
+  }
+  .langCon :first-child
+  {
+      display: none;
+  } 
+/*Logo de l'espace utilisateur*/
+  .connect {
+      position: absolute;
+      top: 20px;
+      left: 15px;  
+      background-size: 15px;
+  }      
+
+/* Cover Pinata Cake*/
+
+.cakeCoverText {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.733);
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 17%;
+  color: black;
+  width: 100%;
+  height: 30px;
+}
+
+/*Présentation*/
+
+.présentationimage img{
+    height: 200px;
+}
+.présentationtext{
+    font-size: 0.7em;
+    padding-left: 15px;
+}
+/* caroussel*/
+@keyframes slidy{
+    0%{
+        left: 0%;
+    }
+    20%{
+        left: 0%;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+/*Partie découvrir*/
+    
+    .découvrir{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .anniversaire{
+        grid-column: 1/2;
+        grid-row; 1/2;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+    .mariage{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding-left: 0;
+        padding-bottom: 30px;
+    }
+    .cupcake{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+    .demande{
+        grid-column: 1/2;
+        grid-row: 4/5;
+        padding-left: 0;
+        padding-bottom: 30px;
+    }
+
+/*Vidéo*/
+
+    .vidéo{
+        display: none;
+    }
+
+/*Footer*/    
+
+    #footer{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 30px 25px 100px 28px 110px;
+        font-size: 13px; 
+        padding: 10px;
+    } 
+    .champMail{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        height: 18px;
+        padding-left: 25px;
+    }
+    .textMail{
+        grid-column: 1/3;
+        grid-row: 2/3;
+        font-size: 11px;
+        padding-left: 25px;
+    }
+    #infos{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    #iconFooter{
+        grid-column: 1/2;
+        grid-row: 4/5;
+        align-items: flex-start;
+        padding-top: 5px;
+    }
+    #iconFooter >img{
+        height: 15px;
+    }
+    .logoFooter{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .adress{
+        grid-column: 2/3;
+        grid-row: 5/6;
+        font-size: 15px;
+    }
+}
